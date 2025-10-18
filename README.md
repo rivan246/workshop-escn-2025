@@ -27,7 +27,7 @@
 ### Langkah 1: Buat Resource Group
 
 - **Nama**: `rg-product-a`  
-- **Region**: `Southeast Asia` (atau region terdekat)
+- **Region**: `East Asia` (atau region terdekat)
 
 > 💡 Lakukan via Azure Portal → *Create a resource group*.
 
@@ -46,7 +46,7 @@
 
 - **Nama**: `nsg-product-a`  
 - **Resource group**: `rg-product-a`  
-- **Region**: `Southeast Asia`
+- **Region**: `East Asia`
 
 > 🔒 **Jangan tambahkan inbound rule apa pun**. Biarkan konfigurasi default (deny all inbound).
 
@@ -57,7 +57,7 @@
 - **Image**: `Ubuntu Server 24.04 LTS`  
 - **VM name**: `vm-product-a`  
 - **Size**: `B1s`
-- **Authentication type**: `username and password` user: labazurees pass: escnmantap!@#
+- **Authentication type**: `password` user: `labazurees` pass: `escnmantap1!@#`
 - **Public IP**: Aktifkan  
 - **Networking**:  
   - Virtual network: `vnet-product-a`  
@@ -112,7 +112,7 @@ Setelah berhasil masuk ke VM, install web server **Nginx**:
 
 1. Buat **Resource Group** baru:
    - Nama: `rg-product-b`
-   - Region: `Southeast Asia`
+   - Region: `East Asia`
 
 2. Buat **Virtual Network**:
    - Nama: `vnet-product-b`
@@ -123,16 +123,14 @@ Setelah berhasil masuk ke VM, install web server **Nginx**:
 3. Buat **Network Security Group**:
    - Nama: `nsg-product-b`
    - Resource group: `rg-product-b`
-   - Region: `Southeast Asia`
+   - Region: `East Asia`
    - **Jangan tambahkan inbound rule dulu** (default: deny all)
 
 4. Buat **VM Linux**:
    - Image: `Ubuntu Server 22.04 LTS`
    - VM name: `vm-product-b`
    - Size: `B1s`
-   - Authentication type: `Password`
-   - Username: `azureuser`
-   - Password: `TempPass123!`
+   - **Authentication type**: `password` user: `labazurees` pass: `escnmantap1!@#`
    - Public IP: Aktifkan
    - Networking:
      - Virtual network: `vnet-product-b`
